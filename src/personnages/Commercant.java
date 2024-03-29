@@ -6,12 +6,10 @@ public class Commercant extends Humain {
 		super(nom, "the", argent);
 	}
 
-	public int seFaireExtorquer(int quantite) {
-		perdreArgent(quantite);
-		if (argent == 0) {
-			parler("J'ai tout perdu!Le monde est trop injuste..");
-		}
-		return quantite;
+	public int seFaireExtorquer() {
+		perdreArgent(argent);
+		parler("J'ai tout perdu!Le monde est trop injuste..");
+		return argent;
 
 	}
 
