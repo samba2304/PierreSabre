@@ -3,7 +3,7 @@ package personnages;
 public class Humain {
 	private String nom;
 	private String boissonPref;
-	private int argent;
+	public int argent;
 
 	public Humain(String nom, String boissonPref, int argent) {
 		this.nom = nom;
@@ -26,7 +26,7 @@ public class Humain {
 
 	public void acheter(String bien, int prix) {
 		if (argent < prix) {
-			parler("Je n'ai plus que " + argent + "en pouche. Je ne peux meme plus m'offfir un " + bien + " " + prix
+			parler("Je n'ai plus que " + argent + " en pouche. Je ne peux meme plus m'offfir un " + bien + " " + prix
 					+ " sous");
 
 		} else {
@@ -35,11 +35,11 @@ public class Humain {
 		}
 	}
 
-	private void gagnerArgent(int gain) {
+	public void gagnerArgent(int gain) {
 		argent += gain;
 	}
 
-	private void perdreArgent(int perte) {
+	public void perdreArgent(int perte) {
 		argent -= perte;
 	}
 
