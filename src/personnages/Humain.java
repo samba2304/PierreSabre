@@ -78,7 +78,7 @@ public class Humain {
 	public void boire() {
 		parler("Mmmm, un bon verre de " + boissonPref + " GLOUPS ! ");
 	}
-
+	
 	public void acheter(String bien, int prix) {
 		if (argent < prix) {
 			parler("Je n'ai plus que " + argent + " en pouche. Je ne peux meme plus m'offfir un " + bien + " " + prix
