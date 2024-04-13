@@ -53,7 +53,6 @@ public class Humain {
 
 	public void listerConnaissance() {
 		String reponse = "";
-		System.out.println(nbHumain);
 		for (int i = 0; i < nbHumain; i++) {
 			if (i == nbHumain-1) {
 				reponse += memoire[i].getNom();
