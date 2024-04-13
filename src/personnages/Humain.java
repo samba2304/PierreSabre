@@ -4,8 +4,8 @@ public class Humain {
 	protected String nom;
 	protected String boissonPref;
 	protected int argent;
-	private static final int TAILLE_TAB = 30;
-	private int nbHumain = 0;
+	public static final int TAILLE_TAB = 30;
+	public int nbConnaisances = 0;
 	protected Humain[] memoire = new Humain[TAILLE_TAB];
 	protected int plusancien = 0; // Humain plus ancien stockéé
 	protected int plusrecent = 0; // Humain plus recent stockéé
@@ -32,13 +32,13 @@ public class Humain {
 		if (plusrecent == TAILLE_TAB) {
 			plusrecent = 0;
 		}
-		if (nbHumain == TAILLE_TAB) {
-			nbHumain = TAILLE_TAB;
+		if (nbConnaisances == TAILLE_TAB) {
+			nbConnaisances = TAILLE_TAB;
 		}
 		if (memoire[plusrecent] == null) {
 			memoire[plusrecent] = humain;
 			plusrecent++;
-			nbHumain++;
+			nbConnaisances++;
 			tableaumodifie = 1;
 		}
 
@@ -53,8 +53,8 @@ public class Humain {
 
 	public void listerConnaissance() {
 		String reponse = "";
-		for (int i = 0; i < nbHumain; i++) {
-			if (i == nbHumain-1) {
+		for (int i = 0; i < nbConnaisances; i++) {
+			if (i == nbConnaisances-1) {
 				reponse += memoire[i].getNom();
 
 			} else {

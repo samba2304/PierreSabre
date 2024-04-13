@@ -17,11 +17,21 @@ public class HistoireTP4 {
 		Yakuza yaku = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong");
 		Ronin roro = new Ronin("Roro", "shochu", 60);
 		Samourai akitomo = new Samourai("Miyamoto","Akitomo","saké",80);
+		Traitre masoko = new Traitre("Miyamoto", "Masako", "whisky", 100);
 		
-		akitomo.faireConnaissanceAvec(marco);
-		akitomo.listerConnaissance();
-		akitomo.boire("thé");
-		
+		masoko.faireLeGentil();
+		masoko.raconner(kumi);
+		masoko.raconner(chonin);
+		masoko.raconner(marco);
+		akitomo.parler(akitomo.direBonjour());
+		masoko.parler(masoko.direBonjour());
+		masoko.raconner(chonin);
+		masoko.parler(masoko.direBonjour());
+		masoko.faireConnaissanceAvec(yaku);
+		masoko.faireLeGentil();
+		masoko.parler(masoko.direBonjour());
+		roro.parler(roro.direBonjour());
+
 	}
 
 }
